@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="widt=devicie-widt, initial-scale=1">
-    <title>>a magia do circo</title>
-    <style>
-
-    </style>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo do Vôlei</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-   <main>
-      <h1> bem vindos ao circo</h1>
-   </main> 
 
+    <header>
+        <h1>VÔLEI</h1>
+    </header>
+
+    <main class="container">
+        <section class="conteudo">
+            <h2>O que é o Voleibol?</h2>
+            <p>O vôlei é um esporte dinâmico jogado por duas equipes em uma quadra dividida por uma rede. O objetivo principal é fazer a bola tocar o chão do lado adversário, usando no máximo três toques por equipe. É uma modalidade que exige reflexos rápidos, força, coordenação motora e agilidade. Suas características marcantes incluem o trabalho coletivo intenso, a ausência de contato físico direto com os rivais e fundamentos técnicos precisos, como o saque, a manchete, o toque e a cortada.</p>
+            
+            <h2>Benefícios para a Saúde</h2>
+            <p>Praticar vôlei traz inúmeras vantagens para o corpo e para a mente. Fisicamente, o esporte queima muitas calorias, auxilia na perda de peso e fortalece os músculos das pernas, braços e abdômen devido aos saltos e deslocamentos rápidos. Além disso, melhora consideravelmente a capacidade cardiovascular e a coordenação de movimentos. No aspecto social e mental, o vôlei reduz o estresse, estimula o foco e ensina a importância da cooperação, já que nenhum jogador consegue vencer sozinho sem o apoio do time.</p>
+        </section>
+
+        <section class="video-section">
+            <div class="video-container">
+                <iframe src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="interacao">
+                <button id="btn-like" class="btn">👍 <span id="qtd-like">0</span></button>
+                <button id="btn-dislike" class="btn">👎 <span id="qtd-dislike">0</span></button>
+            </div>
+
+            <div class="link-original">
+                <a href="https://youtube.com" target="_blank">Assista no YouTube Original</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
