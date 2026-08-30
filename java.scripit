@@ -1,0 +1,47 @@
+const btnLike = document.getElementById('btn-like');
+const btnDislike = document.getElementById('btn-dislike');
+const qtdLike = document.getElementById('qtd-like');
+const qtdDislike = document.getElementById('qtd-dislike');
+
+let likes = 0;
+let dislikes = 0;
+let userVoto = null; // Pode ser 'like', 'dislike' ou null
+
+btnLike.addEventListener('click', () => {
+    if (userVoto === 'like') {
+        likes--;
+        userVoto = null;
+        btnLike.classList.remove('ativo');
+    } else {
+        if (userVoto === 'dislike') {
+            dislikes--;
+            btnDislike.classList.remove('ativo');
+        }
+        likes++;
+        userVoto = 'like';
+        btnLike.classList.add('ativo');
+    }
+    atualizarTela();
+});
+
+btnDislike.addEventListener('click', () => {
+    if (userVoto === 'dislike') {
+        dislikes--;
+        userVoto = null;
+        btnDislike.classList.remove('ativo');
+    } else {
+        if (userVoto === 'like') {
+            likes--;
+            btnLike.classList.remove('ativo');
+        }
+        dislikes++;
+        userVoto = 'dislike';
+        btnDislike.classList.add('ativo');
+    }
+    atualizarTela();
+});
+
+function atualizarTela() {
+    qtdLike.textContent = likes;
+    qtdDislike.textContent = dislikes;
+}
