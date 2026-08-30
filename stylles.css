@@ -1,25 +1,138 @@
- header{
-            background-color: rgb(122, 14, 14);
-            color: black;
-            text-align: center;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 106px;
-        }
-
-        main {
-    background-color: #ad2e2e;
-    color: #000000;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 16px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-article {
+body {
+    background-color: #f7f9fc;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+/* Cabeçalho com o azul oficial do vôlei */
+header {
+    background-color: #0b3c5d;
+    color: #ffcc00; /* Texto em amarelo ouro */
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-bottom: 5px solid #ffcc00; /* Detalhe em amarelo */
+}
+
+header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Títulos das seções em azul */
+.conteudo h2 {
+    color: #0b3c5d;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    border-left: 5px solid #ffcc00; /* Detalhe amarelo na lateral do título */
+    padding-left: 10px;
+}
+
+.conteudo p {
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.video-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Borda do vídeo combinando com o tema */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 12px;
+    border: 4px solid #0b3c5d;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.interacao {
+    margin-top: 20px;
     display: flex;
+    justify-content: center;
+    gap: 25px;
 }
 
-
-.artigo-autor {
+/* Botões estilizados com as cores do esporte */
+.btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
     font-weight: bold;
+    border: 2px solid #0b3c5d;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #0b3c5d;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Cores de ativação mantendo a harmonia */
+#btn-like.ativo {
+    background-color: #0b3c5d;
+    color: #ffcc00;
+    border-color: #ffcc00;
+}
+
+#btn-dislike.ativo {
+    background-color: #d9534f;
+    color: #fff;
+    border-color: #d9534f;
+}
+
+.link-original {
+    margin-top: 25px;
+}
+
+/* Link destacado em azul vôlei */
+.link-original a {
+    color: #0b3c5d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 2px;
+    transition: color 0.2s;
+}
+
+.link-original a:hover {
+    color: #ffcc00;
+    background-color: #0b3c5d;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-bottom: none;
 }
