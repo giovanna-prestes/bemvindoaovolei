@@ -1,7 +1,7 @@
 
 :root {
     --primary: #0056b3;
-    --secondary: #e5ef64;
+    --secondary: #f4f4f9;
     --text: #333;
     --white: #fff;
 }
@@ -17,7 +17,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(135deg, #f3ea85, var(--primary));
+    background: linear-gradient(135deg, #002f6c, var(--primary));
     color: var(--white);
     text-align: center;
     padding: 2.5rem 1rem;
@@ -35,12 +35,14 @@ header p {
     opacity: 0.9;
 }
 
+/* Layout do Conteúdo */
 .container {
     max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
+/* Sistema de Abas (Botões) */
 .tabs {
     display: flex;
     justify-content: center;
