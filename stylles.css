@@ -1,7 +1,7 @@
 
 :root {
     --primary: #0056b3;
-    --secondary: #f4f4f9;
+    --secondary: #e5ef64;
     --text: #333;
     --white: #fff;
 }
@@ -17,7 +17,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(135deg, #002f6c, var(--primary));
+    background: linear-gradient(135deg, #f3ea85, var(--primary));
     color: var(--white);
     text-align: center;
     padding: 2.5rem 1rem;

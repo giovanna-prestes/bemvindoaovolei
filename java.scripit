@@ -1,7 +1,3 @@
-/**
- * Altera a exibição entre as abas de Benefícios e Malefícios
- * @param {string} tabId - O ID da seção que deve ser mostrada ('beneficios' ou 'maleficios')
- */
 function switchTab(tabId) {
     // 1. Remove a classe 'active' de todas as seções de conteúdo
     const sections = document.querySelectorAll('.content-section');
