@@ -1,4 +1,4 @@
-
+/* Configurações Globais */
 :root {
     --primary: #0056b3;
     --secondary: #f4f4f9;
@@ -102,4 +102,10 @@ footer {
     color: var(--white);
     margin-top: 4rem;
     font-size: 0.9rem;
+}
+
+/* Animação suave ao trocar de aba */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
