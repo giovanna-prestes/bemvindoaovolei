@@ -3,48 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo do Vôlei</title>
-    
-    <link rel="stylesheet" href="css/style.css">
+    <title>Vôlei: Benefícios e Malefícios</title>
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #f4f4f9;
+            --text: #333;
+            --white: #fff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary);
+            color: var(--text);
+        }
+
+        header {
+            background: linear-gradient(135deg, #002f6c, var(--primary));
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #ddd;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
+        }
+
+        .content-section {
+            display: none;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .content-section h2 {
+            color: var(--primary);
+            margin-top: 0;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+
+        .text-block {
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #001f4d;
+            color: var(--white);
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <!-- cabeçalho no topo -->
+
     <header>
-        <div class="header-top">
-            <h1>VÔLEI</h1>
-            <img src="logo.png" alt="Logotipo do Mundo do Vôlei">
-        </div>
-        <nav>
-            <a href="#home">Início</a>
-            <a href="#sobre">Sobre</a>
-        </nav>
+        <h1>O Mundo do Vôlei</h1>
+        <p>Descubra os dois lados da prática desse esporte apaixonante</p>
     </header>
 
-    <main class="container">
-        <section class="conteudo">
-            <h2>O que é o Voleibol?</h2>
-            <p>O vôlei é um esporte dinâmico jogado por duas equipes em uma quadra dividida por uma rede. O objetivo principal é fazer a bola tocar o chão do lado adversário, usando no máximo três toques por equipe. É uma modalidade que exige reflexos rápidos, força, coordenação motora e agilidade. Suas características marcantes incluem o trabalho coletivo intenso, a ausência de contato físico direto com os rivais e fundamentos técnicos precisos, como o saque, a manchete, o toque e a cortada.</p>
-            
-            <h2>Benefícios para a Saúde</h2>
-            <p>Praticar vôlei traz inúmeras vantagens para o corpo e para a mente. Fisicamente, o esporte queima muitas calorias, auxilia na perda de peso e fortalece os músculos das pernas, braços e abdômen devido aos saltos e deslocamentos rápidos. Além disso, melhora consideravelmente a capacidade cardiovascular e a coordenação de movimentos. No aspectos social e mental, o vôlei reduz o estresse, estimula o foco e ensina a importância da cooperação, já que nenhum jogador consegue vencer sozinho sem o apoio do time.</p>
-        </section>
+    <div class="container">
+        <!-- Abas de Navegação -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('beneficios')">Benefícios</button>
+            <button class="tab-btn" onclick="switchTab('maleficios')">Malefícios</button>
+        </div>
 
-        <section class="video-section">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/live/a_gPe1SQBMo?si=q2ddFEAAgNKk2U3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- Seção Benefícios -->
+        <div id="beneficios" class="content-section active">
+            <h2>Os Benefícios do Vôlei</h2>
+            <div class="text-block">
+                O voleibol é uma modalidade esportiva completa que promove melhorias significativas para a saúde física e mental dos praticantes. O principal benefício do esporte está no excelente condicionamento cardiovascular que ele proporciona. A dinâmica do jogo, repleta de ralis intensos, deslocamentos rápidos e saltos constantes, eleva a frequência cardíaca, fortalecendo o coração e aumentando a resistência respiratória. Além disso, o vôlei é um poderoso aliado na tonificação muscular generalizada. Os movimentos de manchete, toque e cortada exigem a ativação constante dos membros inferiores, core e membros superiores, resultando no fortalecimento de pernas, glúteos, abdômen e ombros. Outro aspecto físico essencial desenvolvido é a coordenação motora e a agilidade. O atleta precisa reagir rapidamente à trajetória da bola, o que aprimora os reflexos e o equilíbrio corporal. Fora dos ganhos corporais, o vôlei destaca-se fortemente pelo seu impacto social e psicológico. Por ser um esporte estritamente coletivo, no qual nenhum jogador pode tocar a bola duas vezes seguidas, ele exige comunicação clara, confiança mútua e espírito de equipe. Essa interação ajuda a reduzir os níveis de estresse e ansiedade, liberando endorfina e promovendo uma sensação duradoura de bem-estar e socialização entre os participantes.
             </div>
-            
-            <div class="interacao">
-                <button id="btn-like" class="btn">👍 <span id="qtd-like">1</span></button>
-                <button id="btn-dislike" class="btn">👎 <span id="qtd-dislike">0</span></button>
-            </div>
+        </div>
 
-            <div class="link-original">
-                <a href="https://www.youtube.com/live/a_gPe1SQBMo?si=q2ddFEAAgNKk2U3g" target="_blank">Assista no YouTube Original</a>
+        <!-- Seção Malefícios -->
+        <div id="maleficios" class="content-section">
+            <h2>Os Malefícios do Vôlei</h2>
+            <div class="text-block">
+                Apesar de ser uma atividade extremamente saudável, a prática intensa ou inadequada do voleibol pode acarretar riscos e malefícios ao corpo humano. A maior parte desses problemas está associada a lesões por esforço repetitivo e ao forte impacto gerado pelos movimentos do jogo. Os saltos constantes para bloqueios e ataques exigem aterrissagens pesadas, o que sobrecarrega severamente as articulações dos membros inferiores. Como consequência, patologias como a tendinite patelar, conhecida como "joelho do saltador", e entorses de tornozelo são diagnósticos muito comuns entre os atletas. Além disso, os membros superiores sofrem grande desgaste físico. Os movimentos repetitivos e explosivos de ataque e saque geram um estresse excessivo nos ombros, podendo causar lesões crônicas no manguito rotador. Os dedos das mãos também são áreas frequentemente vulneráveis a fraturas, luxações e traumas devido ao impacto direto da bola em alta velocidade durante os bloqueios. Por fim, se o esporte for praticado sem a orientação de profissionais, sem o aquecimento correto ou em pisos inadequados (como cimento duro), o risco de desgaste precoce das cartilagens e dores crônicas na coluna lombar aumenta consideravelmente, transformando os benefícios do esporte em dores limitantes.
             </div>
-        </section>
-    </main>
- 
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Site Informativo sobre Vôlei. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript externo -->
     <script src="script.js"></script>
 </body>
 </html>
