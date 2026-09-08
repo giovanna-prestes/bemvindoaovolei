@@ -1,0 +1,25 @@
+// Aguarda o HTML carregar completamente antes de rodar o script
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".v-tab-btn");
+    const sections = document.querySelectorAll(".v-content-box");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            // 1. Remove a classe ativa de todos os botões
+            buttons.forEach(btn => btn.classList.remove("v-active"));
+            
+            // 2. Remove a classe ativa de todas as seções de texto
+            sections.forEach(sec => sec.classList.remove("v-active"));
+
+            // 3. Adiciona a classe ativa no botão clicado
+            this.classList.add("v-active");
+
+            // 4. Busca a seção correta pelo atributo 'data-target' e a exibe
+            const targetId = this.getAttribute("data-target");
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add("v-active");
+            }
+        });
+    });
+});

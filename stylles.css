@@ -1,0 +1,111 @@
+/* Prefixo 'v-' em todas as classes para evitar qualquer conflito global */
+:root {
+    --v-primary: #0056b3;
+    --v-dark-blue: #002f6c;
+    --v-bg: #f4f4f9;
+    --v-text-color: #333;
+    --v-white: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--v-bg);
+    color: var(--v-text-color);
+    line-height: 1.6;
+}
+
+.v-header {
+    background: linear-gradient(135deg, var(--v-dark-blue), var(--v-primary));
+    color: var(--v-white);
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.v-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.v-header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.v-container {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.v-tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 2rem;
+}
+
+.v-tab-btn {
+    padding: 0.8rem 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: #e0e0e0;
+    color: #555;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.v-tab-btn:hover {
+    background-color: #d0d0d0;
+}
+
+.v-tab-btn.v-active {
+    background-color: var(--v-primary);
+    color: var(--v-white);
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+}
+
+.v-content-box {
+    display: none; /* Oculto por padrão */
+    background: var(--v-white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.v-content-box.v-active {
+    display: block; /* Visível quando ativo */
+    animation: v-slideUp 0.4s ease forwards;
+}
+
+.v-content-box h2 {
+    color: var(--v-dark-blue);
+    margin-top: 0;
+    border-bottom: 3px solid var(--v-bg);
+    padding-bottom: 0.6rem;
+}
+
+.v-text {
+    text-align: justify;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.v-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #001838;
+    color: var(--v-white);
+    margin-top: 5rem;
+    font-size: 0.9rem;
+}
+
+@keyframes v-slideUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
