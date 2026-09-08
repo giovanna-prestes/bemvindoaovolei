@@ -1,126 +1,103 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+:root {
+    --primary: #0056b3;
+    --secondary: #f4f4f9;
+    --text: #333;
+    --white: #fff;
 }
 
 body {
-    background-color: #f7f9fc;
-    color: #2b2b2b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary);
+    color: var(--text);
 }
 
-/* Cabeçalho com o azul oficial do vôlei */
+/* Cabeçalho */
 header {
-    background-color: #0b3c5d;
-    color: #ffcc00; /* Texto em amarelo ouro */
-    padding: 25px 0;
+    background: linear-gradient(135deg, #002f6c, var(--primary));
+    color: var(--white);
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    border-bottom: 5px solid #ffcc00; /* Detalhe em amarelo */
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-size: 2.8rem;
-    letter-spacing: 4px;
-    font-weight: 800;
-    text-shadow: 2px 2px 4px rgba(12, 1, 1, 0.4);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
 .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-/* Títulos das seções em azul */
-.conteudo h2 {
-    color: #0b3c5d;
-    margin-top: 25px;
-    margin-bottom: 12px;
-    border-left: 5px solid #ffcc00; /* Detalhe amarelo na lateral do título */
-    padding-left: 10px;
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
 }
 
-.conteudo p {
+.tab-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
+}
+
+/* Caixas de Texto */
+.content-section {
+    display: none;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    animation: fadeIn 0.5s ease;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.content-section h2 {
+    color: var(--primary);
+    margin-top: 0;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.5rem;
+}
+
+.text-block {
     text-align: justify;
-    margin-bottom: 20px;
     font-size: 1.05rem;
 }
 
-.video-section {
-    margin-top: 50px;
+/* Rodapé */
+footer {
     text-align: center;
-}
-
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.interacao {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
-
-/* Botões estilizados com as cores do esporte */
-.btn {
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border: 2px solid #0b3c5d;
-    border-radius: 30px;
-    cursor: pointer;
-    background-color: #fff;
-    color: #0b3c5d;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: all 0.2s ease-in-out;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-/* Cores de ativação mantendo a harmonia */
-#btn-like.ativo {
-    background-color: #0b3c5d;
-    color: #ffcc00;
-    border-color: #ffcc00;
-}
-
-#btn-dislike.ativo {
-    background-color: #d9534f;
-    color: #fff;
-    border-color: #d9534f;
-}
-
-.link-original {
-    margin-top: 25px;
-}
-
-
-.link-original a {
-    color: #0b3c5d;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    border-bottom: 2px solid #ffcc00;
-    padding-bottom: 2px;
-    transition: color 0.2s;
-}
-
-.link-original a:hover {
-    color: #ffcc00;
-    background-color: #0b3c5d;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border-bottom: none;
+    padding: 1.5rem;
+    background-color: #001f4d;
+    color: var(--white);
+    margin-top: 4rem;
+    font-size: 0.9rem;
 }
